@@ -30,7 +30,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <a href="#hero" className="flex items-center gap-2">
             <Tv className="h-7 w-7 text-primary" />
-            <span className="text-xl font-bold text-gradient-gold">IPTV Pro</span>
+            <span className="text-xl font-bold text-gradient-gold">أبو غيث</span>
           </a>
 
           <div className="hidden md:flex items-center gap-6">

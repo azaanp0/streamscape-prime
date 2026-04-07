@@ -1,48 +1,60 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import ContentRow from "./ContentRow";
 
+import movies1 from "@/assets/movies-1.jpg";
+import movies2 from "@/assets/movies-2.jpg";
+import movies3 from "@/assets/movies-3.jpg";
+import movies4 from "@/assets/movies-4.jpg";
+import movies5 from "@/assets/movies-5.jpg";
+import movies6 from "@/assets/movies-6.jpg";
+import movies7 from "@/assets/movies-7.jpg";
+import movies8 from "@/assets/movies-8.jpg";
+
+import series1 from "@/assets/series-1.jpg";
+import series2 from "@/assets/series-2.jpg";
+import series3 from "@/assets/series-3.jpg";
+import series4 from "@/assets/series-4.jpg";
+
+import sports1 from "@/assets/sports-1.jpg";
+import sports2 from "@/assets/sports-2.jpg";
+import sports3 from "@/assets/sports-3.jpg";
+import sports4 from "@/assets/sports-4.jpg";
+
+import kids1 from "@/assets/kids-1.jpg";
+import kids2 from "@/assets/kids-2.jpg";
+import kids3 from "@/assets/kids-3.jpg";
+import kids4 from "@/assets/kids-4.jpg";
+
 const movies = [
-  { image: "https://image.tmdb.org/t/p/w300/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg", title: "ذا باتمان" },
-  { image: "https://image.tmdb.org/t/p/w300/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg", title: "توب غان: مافريك" },
-  { image: "https://image.tmdb.org/t/p/w300/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg", title: "أفاتار" },
-  { image: "https://image.tmdb.org/t/p/w300/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg", title: "إنترستيلر" },
-  { image: "https://image.tmdb.org/t/p/w300/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg", title: "جوكر" },
-  { image: "https://image.tmdb.org/t/p/w300/9gk7adHYeDvHkCSEhniVolVQ4Zy.jpg", title: "إنسبشن" },
-  { image: "https://image.tmdb.org/t/p/w300/d5NXSklXo0qyIYkgV94XAgMIckC.jpg", title: "ديون" },
-  { image: "https://image.tmdb.org/t/p/w300/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg", title: "ذا ماتريكس" },
+  { image: movies1, title: "أفلام أكشن" },
+  { image: movies2, title: "أبطال خارقون" },
+  { image: movies3, title: "خيال علمي" },
+  { image: movies4, title: "إثارة وغموض" },
+  { image: movies5, title: "مغامرات" },
+  { image: movies6, title: "رعب" },
+  { image: movies7, title: "فانتازيا" },
+  { image: movies8, title: "حروب ملحمية" },
 ];
 
 const series = [
-  { image: "https://image.tmdb.org/t/p/w300/ggFHVNu6YYI5L9pCfOacjizRGt.jpg", title: "بريكنغ باد" },
-  { image: "https://image.tmdb.org/t/p/w300/49WJfeN0moxb9IPfGn8AIqMGskD.jpg", title: "أشياء غريبة" },
-  { image: "https://image.tmdb.org/t/p/w300/7vjaCdMw15FEbXyLQTVa04URsPm.jpg", title: "ذا ويتشر" },
-  { image: "https://image.tmdb.org/t/p/w300/z2yahl2uefxDCl0nogcRBstwruJ.jpg", title: "عائلة التنين" },
-  { image: "https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg", title: "ذا لاست أوف أس" },
-  { image: "https://image.tmdb.org/t/p/w300/9PFonBIUDEFzlBPsrk3Y5aSHRER.jpg", title: "ونزداي" },
-  { image: "https://image.tmdb.org/t/p/w300/dDlEmu3EZ0Pgg93K2SVNLCjCSvE.jpg", title: "لعبة الحبار" },
-  { image: "https://image.tmdb.org/t/p/w300/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg", title: "بيكي بلايندرز" },
+  { image: series1, title: "دراما بوليسية" },
+  { image: series2, title: "خوارق ومغامرات" },
+  { image: series3, title: "فانتازيا ملحمية" },
+  { image: series4, title: "دراما طبية" },
 ];
 
 const sports = [
-  { image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=300&h=450&fit=crop", title: "دوري أبطال أوروبا" },
-  { image: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=300&h=450&fit=crop", title: "الدوري الإنجليزي" },
-  { image: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=300&h=450&fit=crop", title: "الدوري الإسباني" },
-  { image: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=300&h=450&fit=crop", title: "UFC والفنون القتالية" },
-  { image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=300&h=450&fit=crop", title: "كرة السلة NBA" },
-  { image: "https://images.unsplash.com/photo-1504707748692-419802cf939d?w=300&h=450&fit=crop", title: "فورمولا 1" },
-  { image: "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=300&h=450&fit=crop", title: "بطولات التنس" },
-  { image: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=300&h=450&fit=crop", title: "كأس العالم" },
+  { image: sports1, title: "كرة القدم" },
+  { image: sports2, title: "كرة السلة" },
+  { image: sports3, title: "فورمولا 1" },
+  { image: sports4, title: "الملاكمة" },
 ];
 
 const kids = [
-  { image: "https://image.tmdb.org/t/p/w300/gIO47PN3mOYv2Eqp1VhfjWQQjDb.jpg", title: "سبونج بوب" },
-  { image: "https://image.tmdb.org/t/p/w300/kgwjIb2JDHRhNk13lmSxiClFjVk.jpg", title: "فروزن" },
-  { image: "https://image.tmdb.org/t/p/w300/ic0intvXZSfBlYPIvWXpU1ivUCO.jpg", title: "باو باترول" },
-  { image: "https://image.tmdb.org/t/p/w300/4nSFpGqfMj2XPkz4Mz7KllVyiDP.jpg", title: "موانا" },
-  { image: "https://image.tmdb.org/t/p/w300/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg", title: "حكاية لعبة" },
-  { image: "https://image.tmdb.org/t/p/w300/4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg", title: "إنكانتو" },
-  { image: "https://image.tmdb.org/t/p/w300/wKiOkZTN9lUUUNZLmtnwubZYONg.jpg", title: "مينيونز" },
-  { image: "https://image.tmdb.org/t/p/w300/jTswp6KyDYKtvC52GbHagrZbGvD.jpg", title: "لوكا" },
+  { image: kids1, title: "عالم الكرتون" },
+  { image: kids2, title: "أميرات الثلج" },
+  { image: kids3, title: "كلاب الإنقاذ" },
+  { image: kids4, title: "مغامرات استوائية" },
 ];
 
 const ContentShowcase = () => {

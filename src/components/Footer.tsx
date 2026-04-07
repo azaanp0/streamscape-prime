@@ -6,7 +6,7 @@ const Footer = () => (
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2">
           <Tv className="h-6 w-6 text-primary" />
-          <span className="text-lg font-bold text-gradient-gold">IPTV Pro</span>
+          <span className="text-lg font-bold text-gradient-gold">أبو غيث</span>
         </div>
 
         <div className="flex gap-6 text-sm text-muted-foreground">
@@ -28,7 +28,7 @@ const Footer = () => (
       </div>
 
       <div className="text-center mt-8 text-xs text-muted-foreground">
-        © {new Date().getFullYear()} IPTV Pro. جميع الحقوق محفوظة.
+        © {new Date().getFullYear()} أبو غيث. جميع الحقوق محفوظة.
       </div>
     </div>
   </footer>

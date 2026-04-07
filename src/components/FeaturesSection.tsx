@@ -2,10 +2,10 @@ import { Zap, Server, Monitor, Headphones } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const features = [
-  { icon: Zap, title: "High Quality Streaming", desc: "Crystal-clear 4K resolution with zero buffering for the ultimate viewing experience." },
-  { icon: Server, title: "Fast Servers", desc: "Lightning-fast global servers ensuring stable connections around the clock." },
-  { icon: Monitor, title: "Multi-device Support", desc: "Watch on Smart TV, mobile, tablet, or PC — seamlessly across all your devices." },
-  { icon: Headphones, title: "24/7 Support", desc: "Our dedicated support team is always here to help you whenever you need." },
+  { icon: Zap, title: "بث عالي الجودة", desc: "دقة 4K فائقة الوضوح بدون أي تقطيع لتجربة مشاهدة مثالية." },
+  { icon: Server, title: "سيرفرات سريعة", desc: "سيرفرات عالمية فائقة السرعة تضمن اتصالاً مستقراً على مدار الساعة." },
+  { icon: Monitor, title: "دعم أجهزة متعددة", desc: "شاهد على التلفاز الذكي أو الجوال أو التابلت أو الكمبيوتر بسلاسة تامة." },
+  { icon: Headphones, title: "دعم فني 24/7", desc: "فريق الدعم الفني متواجد دائماً لمساعدتك في أي وقت تحتاجه." },
 ];
 
 const FeaturesSection = () => {
@@ -17,10 +17,10 @@ const FeaturesSection = () => {
       <div ref={ref} className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Why Choose <span className="text-gradient-gold">IPTV Pro</span>
+            لماذا تختار <span className="text-gradient-gold">IPTV Pro</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Experience entertainment like never before with our cutting-edge streaming technology.
+            استمتع بالترفيه كما لم تعهده من قبل مع تقنية البث المتطورة لدينا.
           </p>
         </div>
 

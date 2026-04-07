@@ -2,9 +2,9 @@ import { Globe, Gauge, Shield } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const items = [
-  { icon: Gauge, title: "Performance", desc: "Ultra-fast streaming powered by optimized CDN infrastructure for buffer-free playback." },
-  { icon: Shield, title: "Stability", desc: "Enterprise-grade servers with 99.9% uptime guarantee and automatic failover." },
-  { icon: Globe, title: "Global Access", desc: "Connect from anywhere in the world with our distributed global network." },
+  { icon: Gauge, title: "الأداء", desc: "بث فائق السرعة مدعوم ببنية تحتية CDN محسّنة لتشغيل بدون تقطيع." },
+  { icon: Shield, title: "الاستقرار", desc: "سيرفرات بمستوى المؤسسات مع ضمان تشغيل 99.9% وتحويل تلقائي." },
+  { icon: Globe, title: "وصول عالمي", desc: "اتصل من أي مكان في العالم عبر شبكتنا العالمية الموزعة." },
 ];
 
 const AboutSection = () => {
@@ -15,11 +15,11 @@ const AboutSection = () => {
       <div ref={ref} className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Powered by <span className="text-gradient-gold">Technology</span>
+            مدعوم بأحدث <span className="text-gradient-gold">التقنيات</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            IPTV uses Internet Protocol to deliver television content over your broadband connection,
-            providing superior quality and flexibility compared to traditional broadcasting.
+            تقنية IPTV تستخدم بروتوكول الإنترنت لتوصيل المحتوى التلفزيوني عبر اتصالك بالإنترنت،
+            مما يوفر جودة ومرونة فائقة مقارنة بالبث التقليدي.
           </p>
         </div>
 

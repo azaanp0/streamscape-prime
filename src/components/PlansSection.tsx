@@ -2,14 +2,14 @@ import { MessageCircle, Crown } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const plans = [
-  { name: "Falcon", desc: "Blazing speed with premium HD channels and global coverage." },
-  { name: "Hulk The German", desc: "Powerful German & international content bundle for unlimited viewing." },
-  { name: "Vulture", desc: "Soar through vast entertainment with exclusive sports and cinema." },
-  { name: "Alfa", desc: "Elite streaming with unmatched quality and channel diversity." },
-  { name: "Shark", desc: "Dive deep into a world of movies, series, and live events." },
-  { name: "Gulfar", desc: "Premium Arabic and international entertainment at your fingertips." },
-  { name: "Universe", desc: "All-in-one cosmic package with every channel you can imagine." },
-  { name: "NWE 4K", desc: "Next-gen 4K Ultra HD streaming for the ultimate visual experience." },
+  { name: "Falcon", desc: "سرعة فائقة مع قنوات HD مميزة وتغطية عالمية شاملة." },
+  { name: "Hulk The German", desc: "باقة محتوى ألماني ودولي قوية لمشاهدة غير محدودة." },
+  { name: "Vulture", desc: "حلّق عبر عالم واسع من الترفيه مع رياضة وسينما حصرية." },
+  { name: "Alfa", desc: "بث نخبوي بجودة لا مثيل لها وتنوع هائل في القنوات." },
+  { name: "Shark", desc: "غُص في عالم من الأفلام والمسلسلات والأحداث المباشرة." },
+  { name: "Gulfar", desc: "ترفيه عربي ودولي مميز في متناول يدك." },
+  { name: "Universe", desc: "باقة شاملة تضم كل القنوات التي يمكنك تخيلها." },
+  { name: "NWE 4K", desc: "بث الجيل القادم بدقة 4K فائقة لتجربة بصرية استثنائية." },
 ];
 
 const PlansSection = () => {
@@ -20,10 +20,10 @@ const PlansSection = () => {
       <div ref={ref} className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Subscription <span className="text-gradient-gold">Plans</span>
+            باقات <span className="text-gradient-gold">الاشتراك</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Choose your preferred IPTV brand and start streaming today.
+            اختر علامتك المفضلة وابدأ البث اليوم.
           </p>
         </div>
 
@@ -48,7 +48,7 @@ const PlansSection = () => {
                 className="inline-flex items-center justify-center gap-2 bg-gradient-gold text-primary-foreground px-4 py-3 rounded-xl text-sm font-semibold hover:scale-105 transition-transform duration-300 w-full"
               >
                 <MessageCircle className="h-4 w-4" />
-                Subscribe via WhatsApp
+                اشترك عبر واتساب
               </a>
             </div>
           ))}

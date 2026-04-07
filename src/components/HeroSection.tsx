@@ -14,7 +14,7 @@ const HeroSection = () => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-background/70" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-background/30" />
 
       {/* Floating glow orbs */}
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-[100px] animate-pulse" />

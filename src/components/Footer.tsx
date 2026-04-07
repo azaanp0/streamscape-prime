@@ -10,10 +10,10 @@ const Footer = () => (
         </div>
 
         <div className="flex gap-6 text-sm text-muted-foreground">
-          <a href="#hero" className="hover:text-primary transition-colors">Home</a>
-          <a href="#features" className="hover:text-primary transition-colors">Features</a>
-          <a href="#plans" className="hover:text-primary transition-colors">Plans</a>
-          <a href="#about" className="hover:text-primary transition-colors">About</a>
+          <a href="#hero" className="hover:text-primary transition-colors">الرئيسية</a>
+          <a href="#features" className="hover:text-primary transition-colors">المميزات</a>
+          <a href="#plans" className="hover:text-primary transition-colors">الباقات</a>
+          <a href="#about" className="hover:text-primary transition-colors">عن الخدمة</a>
         </div>
 
         <a
@@ -23,12 +23,12 @@ const Footer = () => (
           className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm"
         >
           <MessageCircle className="h-4 w-4" />
-          WhatsApp Support
+          دعم واتساب
         </a>
       </div>
 
       <div className="text-center mt-8 text-xs text-muted-foreground">
-        © {new Date().getFullYear()} IPTV Pro. All rights reserved.
+        © {new Date().getFullYear()} IPTV Pro. جميع الحقوق محفوظة.
       </div>
     </div>
   </footer>

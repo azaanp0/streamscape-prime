@@ -3,11 +3,11 @@ import { Star } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const testimonials = [
-  { name: "Ahmed K.", text: "Best IPTV service I've ever used. Crystal clear quality and zero buffering!", avatar: "AK" },
-  { name: "Sarah M.", text: "Love the variety of channels. My whole family enjoys it every day.", avatar: "SM" },
-  { name: "Omar H.", text: "The sports coverage is incredible. Never miss a match anymore!", avatar: "OH" },
-  { name: "Fatima A.", text: "24/7 support is amazing. They helped me set up everything in minutes.", avatar: "FA" },
-  { name: "Youssef R.", text: "NWE 4K quality is mind-blowing. Feels like cinema at home.", avatar: "YR" },
+  { name: "أحمد خ.", text: "أفضل خدمة IPTV استخدمتها على الإطلاق. جودة عالية وبدون أي تقطيع!", avatar: "أخ" },
+  { name: "سارة م.", text: "أحب تنوع القنوات. كل العائلة تستمتع بها يومياً.", avatar: "سم" },
+  { name: "عمر ح.", text: "التغطية الرياضية رائعة. لم أعد أفوّت أي مباراة!", avatar: "عح" },
+  { name: "فاطمة ع.", text: "الدعم الفني متاح 24 ساعة وممتاز. ساعدوني في إعداد كل شيء خلال دقائق.", avatar: "فع" },
+  { name: "يوسف ر.", text: "جودة NWE 4K مذهلة. تحس إنك في السينما وأنت في بيتك.", avatar: "ير" },
 ];
 
 const TestimonialsSection = () => {
@@ -26,7 +26,7 @@ const TestimonialsSection = () => {
       <div ref={ref} className={`max-w-3xl mx-auto ${isVisible ? "animate-fade-in" : "opacity-0"}`}>
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            What Our <span className="text-gradient-gold">Customers</span> Say
+            ماذا يقول <span className="text-gradient-gold">عملاؤنا</span>
           </h2>
         </div>
 

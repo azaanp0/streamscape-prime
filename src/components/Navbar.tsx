@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import { Menu, X, Tv } from "lucide-react";
 
 const links = [
-  { label: "Home", href: "#hero" },
-  { label: "Features", href: "#features" },
-  { label: "Plans", href: "#plans" },
-  { label: "Content", href: "#content" },
-  { label: "About", href: "#about" },
-  { label: "Reviews", href: "#testimonials" },
+  { label: "الرئيسية", href: "#hero" },
+  { label: "المميزات", href: "#features" },
+  { label: "الباقات", href: "#plans" },
+  { label: "المحتوى", href: "#content" },
+  { label: "عن الخدمة", href: "#about" },
+  { label: "آراء العملاء", href: "#testimonials" },
 ];
 
 const Navbar = () => {
@@ -49,7 +49,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               className="bg-gradient-gold text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold hover:scale-105 transition-transform duration-300"
             >
-              Subscribe Now
+              اشترك الآن
             </a>
           </div>
 
@@ -81,7 +81,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               className="block bg-gradient-gold text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold text-center"
             >
-              Subscribe Now
+              اشترك الآن
             </a>
           </div>
         </div>

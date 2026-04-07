@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
-import { Star } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const testimonials = [
-  { name: "أحمد خ.", text: "أفضل خدمة IPTV استخدمتها على الإطلاق. جودة عالية وبدون أي تقطيع!", avatar: "أخ" },
-  { name: "سارة م.", text: "أحب تنوع القنوات. كل العائلة تستمتع بها يومياً.", avatar: "سم" },
-  { name: "عمر ح.", text: "التغطية الرياضية رائعة. لم أعد أفوّت أي مباراة!", avatar: "عح" },
-  { name: "فاطمة ع.", text: "الدعم الفني متاح 24 ساعة وممتاز. ساعدوني في إعداد كل شيء خلال دقائق.", avatar: "فع" },
-  { name: "يوسف ر.", text: "جودة NWE 4K مذهلة. تحس إنك في السينما وأنت في بيتك.", avatar: "ير" },
+  { name: "أحمد خ.", text: "أفضل خدمة IPTV استخدمتها على الإطلاق. جودة عالية وبدون أي تقطيع!" },
+  { name: "سارة م.", text: "أحب تنوع القنوات. كل العائلة تستمتع بها يومياً." },
+  { name: "عمر ح.", text: "التغطية الرياضية رائعة. لم أعد أفوّت أي مباراة!" },
+  { name: "فاطمة ع.", text: "الدعم الفني متاح 24 ساعة وممتاز. ساعدوني في إعداد كل شيء خلال دقائق." },
+  { name: "يوسف ر.", text: "جودة NWE 4K مذهلة. تحس إنك في السينما وأنت في بيتك." },
 ];
 
 const TestimonialsSection = () => {
@@ -30,7 +29,7 @@ const TestimonialsSection = () => {
           </h2>
         </div>
 
-        <div className="glass-card rounded-2xl p-8 text-center relative overflow-hidden min-h-[200px]">
+        <div className="glass-card rounded-2xl p-8 text-center relative overflow-hidden min-h-[160px]">
           {testimonials.map((t, i) => (
             <div
               key={i}
@@ -38,14 +37,6 @@ const TestimonialsSection = () => {
                 i === active ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              <div className="w-14 h-14 rounded-full bg-gradient-gold flex items-center justify-center text-primary-foreground font-bold text-lg mb-4">
-                {t.avatar}
-              </div>
-              <div className="flex gap-1 mb-3">
-                {Array.from({ length: 5 }).map((_, j) => (
-                  <Star key={j} className="h-4 w-4 fill-primary text-primary" />
-                ))}
-              </div>
               <p className="text-muted-foreground mb-4 text-sm sm:text-base italic">"{t.text}"</p>
               <p className="text-foreground font-semibold">{t.name}</p>
             </div>

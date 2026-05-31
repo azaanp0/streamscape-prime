@@ -38,7 +38,7 @@ const series = [
 ];
 
 const sports = [
-  { image: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=500&fit=crop", title: "كرة القدم" },
+  
   { image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=500&fit=crop", title: "كرة السلة" },
   { image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&fit=crop", title: "فورمولا 1" },
   { image: "https://images.unsplash.com/photo-1547347298-4074fc3086f0?w=500&fit=crop", title: "الملاكمة" },
@@ -51,8 +51,7 @@ const sports = [
   { image: "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?w=500&fit=crop", title: "كرة الطائرة" },
   { image: "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=500&fit=crop", title: "هوكي الجليد" },
   { image: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=500&fit=crop", title: "جمباز" },
-  { image: "https://images.unsplash.com/photo-1526676037777-05a232554f77?w=500&fit=crop", title: "رياضات مائية" },
-  { image: "https://images.unsplash.com/photo-1565992441121-4367a2sdf1ef?w=500&fit=crop", title: "رياضات شتوية" },
+
 ];
 
 const kids = [

@@ -1,148 +1,81 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import ContentRow from "./ContentRow";
 
-// === استيراد صور الأفلام (15 صورة) ===
-import movies1 from "@/assets/movies-1.jpg";
-import movies2 from "@/assets/movies-2.jpg";
-import movies3 from "@/assets/movies-3.jpg";
-import movies4 from "@/assets/movies-4.jpg";
-import movies5 from "@/assets/movies-5.jpg";
-import movies6 from "@/assets/movies-6.jpg";
-import movies7 from "@/assets/movies-7.jpg";
-import movies8 from "@/assets/movies-8.jpg";
-import movies9 from "@/assets/movies-9.jpg";
-import movies10 from "@/assets/movies-10.jpg";
-import movies11 from "@/assets/movies-11.jpg";
-import movies12 from "@/assets/movies-12.jpg";
-import movies13 from "@/assets/movies-13.jpg";
-import movies14 from "@/assets/movies-14.jpg";
-import movies15 from "@/assets/movies-15.jpg";
+const p = (title: string, c1: string, c2: string, icon: string) => {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="500" height="750"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="${c1}"/><stop offset="100%" stop-color="${c2}"/></linearGradient></defs><rect width="500" height="750" fill="url(#g)"/><text x="250" y="330" font-size="120" text-anchor="middle" dominant-baseline="middle">${icon}</text><text x="250" y="480" font-size="38" font-family="Arial" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">${title}</text></svg>`;
+  return `data:image/svg+xml;base64,${btoa(unescape(encodeURIComponent(svg)))}`;
+};
 
-// === استيراد صور المسلسلات (15 صورة) ===
-import series1 from "@/assets/series-1.jpg";
-import series2 from "@/assets/series-2.jpg";
-import series3 from "@/assets/series-3.jpg";
-import series4 from "@/assets/series-4.jpg";
-import series5 from "@/assets/series-5.jpg";
-import series6 from "@/assets/series-6.jpg";
-import series7 from "@/assets/series-7.jpg";
-import series8 from "@/assets/series-8.jpg";
-import series9 from "@/assets/series-9.jpg";
-import series10 from "@/assets/series-10.jpg";
-import series11 from "@/assets/series-11.jpg";
-import series12 from "@/assets/series-12.jpg";
-import series13 from "@/assets/series-13.jpg";
-import series14 from "@/assets/series-14.jpg";
-import series15 from "@/assets/series-15.jpg";
-
-// === استيراد صور الرياضة (15 صورة) ===
-import sports1 from "@/assets/sports-1.jpg";
-import sports2 from "@/assets/sports-2.jpg";
-import sports3 from "@/assets/sports-3.jpg";
-import sports4 from "@/assets/sports-4.jpg";
-import sports5 from "@/assets/sports-5.jpg";
-import sports6 from "@/assets/sports-6.jpg";
-import sports7 from "@/assets/sports-7.jpg";
-import sports8 from "@/assets/sports-8.jpg";
-import sports9 from "@/assets/sports-9.jpg";
-import sports10 from "@/assets/sports-10.jpg";
-import sports11 from "@/assets/sports-11.jpg";
-import sports12 from "@/assets/sports-12.jpg";
-import sports13 from "@/assets/sports-13.jpg";
-import sports14 from "@/assets/sports-14.jpg";
-import sports15 from "@/assets/sports-15.jpg";
-
-// === استيراد صور الأطفال (15 صورة) ===
-import kids1 from "@/assets/kids-1.jpg";
-import kids2 from "@/assets/kids-2.jpg";
-import kids3 from "@/assets/kids-3.jpg";
-import kids4 from "@/assets/kids-4.jpg";
-import kids5 from "@/assets/kids-5.jpg";
-import kids6 from "@/assets/kids-6.jpg";
-import kids7 from "@/assets/kids-7.jpg";
-import kids8 from "@/assets/kids-8.jpg";
-import kids9 from "@/assets/kids-9.jpg";
-import kids10 from "@/assets/kids-10.jpg";
-import kids11 from "@/assets/kids-11.jpg";
-import kids12 from "@/assets/kids-12.jpg";
-import kids13 from "@/assets/kids-13.jpg";
-import kids14 from "@/assets/kids-14.jpg";
-import kids15 from "@/assets/kids-15.jpg";
-
-// === مصفوفة الأفلام (15 عنصراً فريداً) ===
 const movies = [
-  { image: movies1, title: "أفلام أكشن" },
-  { image: movies2, title: "أبطال خارقون" },
-  { image: movies3, title: "خيال علمي" },
-  { image: movies4, title: "إثارة وغموض" },
-  { image: movies5, title: "مغامرات" },
-  { image: movies6, title: "رعب" },
-  { image: movies7, title: "فانتازيا" },
-  { image: movies8, title: "حروب ملحمية" },
-  { image: movies9, title: "كوميديا" },
-  { image: movies10, title: "دراما واقعية" },
-  { image: movies11, title: "جريمة وغموض" },
-  { image: movies12, title: "أفلام وثائقية" },
-  { image: movies13, title: "رومانسية" },
-  { image: movies14, title: "رسوم متحركة للكبار" },
-  { image: movies15, title: "سير ذاتية ومسيرة" },
+  { image: p("أفلام أكشن",      "#1a1a2e","#e94560","💥"), title: "أفلام أكشن" },
+  { image: p("أبطال خارقون",    "#0f3460","#533483","🦸"), title: "أبطال خارقون" },
+  { image: p("خيال علمي",       "#03071e","#00b4d8","🚀"), title: "خيال علمي" },
+  { image: p("إثارة وغموض",     "#2d132c","#ee4540","🔍"), title: "إثارة وغموض" },
+  { image: p("مغامرات",         "#1b4332","#52b788","🗺️"), title: "مغامرات" },
+  { image: p("رعب",             "#0a0a0a","#6b0f1a","👻"), title: "رعب" },
+  { image: p("فانتازيا",        "#240046","#7b2ff7","🧙"), title: "فانتازيا" },
+  { image: p("حروب ملحمية",     "#212529","#c9a227","⚔️"), title: "حروب ملحمية" },
+  { image: p("كوميديا",         "#e76f51","#f4a261","😂"), title: "كوميديا" },
+  { image: p("جريمة ودراما",    "#14213d","#fca311","🎭"), title: "جريمة ودراما" },
+  { image: p("رومانسية",        "#590d22","#ff4d6d","❤️"), title: "رومانسية" },
+  { image: p("تاريخية",         "#582f0e","#c9a227","🏛️"), title: "تاريخية" },
+  { image: p("وثائقية",         "#023e8a","#48cae4","🎥"), title: "وثائقية" },
+  { image: p("دراما عائلية",    "#2d6a4f","#95d5b2","👨‍👩‍👧"), title: "دراما عائلية" },
+  { image: p("إثارة بوليسية",   "#1c1c1c","#c77dff","🕵️"), title: "إثارة بوليسية" },
 ];
 
-// === مصفوفة المسلسلات (15 عنصراً فريداً) ===
 const series = [
-  { image: series1, title: "دراما بوليسية" },
-  { image: series2, title: "خوارق ومغامرات" },
-  { image: series3, title: "فانتازيا ملحمية" },
-  { image: series4, title: "دراما طبية" },
-  { image: series5, title: "تحقيق وجرائم" },
-  { image: series6, title: "مسلسلات تاريخية" },
-  { image: series7, title: "إثارة نفسية" },
-  { image: series8, title: "كوميديا المكاتب" },
-  { image: series9, title: "عالم الجريمة المُنظمة" },
-  { image: series10, title: "خيال علمي مستقبلي" },
-  { image: series11, title: "غموض وبلدات صغيرة" },
-  { image: series12, title: "مسلسلات قصيرة" },
-  { image: series13, title: "صراع العروش والملوك" },
-  { image: series14, title: "دراما عائلية" },
-  { image: series15, title: "قصص حقيقية" },
+  { image: p("دراما بوليسية",    "#1c1c1c","#e63946","👮"), title: "دراما بوليسية" },
+  { image: p("خوارق ومغامرات",  "#10002b","#7b2ff7","⚡"), title: "خوارق ومغامرات" },
+  { image: p("فانتازيا ملحمية", "#370617","#f48c06","🐉"), title: "فانتازيا ملحمية" },
+  { image: p("دراما طبية",      "#003049","#fcbf49","🏥"), title: "دراما طبية" },
+  { image: p("إثارة نفسية",     "#0d0d0d","#9d4edd","🧠"), title: "إثارة نفسية" },
+  { image: p("أكشن مستقبلي",   "#03071e","#48cae4","🤖"), title: "أكشن مستقبلي" },
+  { image: p("تاريخي ملحمي",   "#7f4f24","#e9c46a","🏰"), title: "تاريخي ملحمي" },
+  { image: p("جريمة منظمة",    "#212529","#dc2f02","🃏"), title: "جريمة منظمة" },
+  { image: p("رعب ومفاجآت",    "#03071e","#6a0572","😱"), title: "رعب ومفاجآت" },
+  { image: p("كوميديا رومانسية","#ff6b6b","#feca57","💑"), title: "كوميديا رومانسية" },
+  { image: p("مسلسلات تركية",  "#780000","#c1121f","🌙"), title: "مسلسلات تركية" },
+  { image: p("دراما كورية",    "#0077b6","#00b4d8","🎎"), title: "دراما كورية" },
+  { image: p("أكشن ياباني",    "#d00000","#370617","⛩️"), title: "أكشن ياباني" },
+  { image: p("ميني سيريز",     "#22223b","#9a8c98","📺"), title: "ميني سيريز" },
+  { image: p("دراما اجتماعية", "#386641","#a7c957","🌍"), title: "دراما اجتماعية" },
 ];
 
-// === مصفوفة الرياضة (15 عنصراً فريداً) ===
 const sports = [
-  { image: sports1, title: "كرة القدم" },
-  { image: sports2, title: "كرة السلة" },
-  { image: sports3, title: "فورمولا 1" },
-  { image: sports4, title: "الملاكمة" },
-  { image: sports5, title: "التنس العالمي" },
-  { image: sports6, title: "الفنون القتالية المفتوحة" },
-  { image: sports7, title: "سباقات الهجن والخيول" },
-  { image: sports8, title: "كرة اليد" },
-  { image: sports9, title: "الألعاب الأولمبية" },
-  { image: sports10, title: "رياضات إلكترونية" },
-  { image: sports11, title: "المصارعة الحرة" },
-  { image: sports12, title: "سباقات الدراجات" },
-  { image: sports13, title: "الرياضات الشتوية" },
-  { image: sports14, title: "الكريكت" },
-  { image: sports15, title: "وثائقيات رياضية" },
+  { image: p("كرة القدم",         "#005f73","#94d2bd","⚽"), title: "كرة القدم" },
+  { image: p("كرة السلة",         "#e85d04","#f48c06","🏀"), title: "كرة السلة" },
+  { image: p("فورمولا 1",         "#d00000","#370617","🏎️"), title: "فورمولا 1" },
+  { image: p("الملاكمة",          "#1c1c1c","#c9a227","🥊"), title: "الملاكمة" },
+  { image: p("ألعاب القوى",       "#0077b6","#48cae4","🏃"), title: "ألعاب القوى" },
+  { image: p("سباحة",             "#023e8a","#90e0ef","🏊"), title: "سباحة" },
+  { image: p("تنس",               "#2d6a4f","#95d5b2","🎾"), title: "تنس" },
+  { image: p("فوتبول أمريكي",    "#7f4f24","#c9a227","🏈"), title: "فوتبول أمريكي" },
+  { image: p("تسلق الجبال",       "#606c38","#dda15e","🧗"), title: "تسلق الجبال" },
+  { image: p("لياقة بدنية",       "#370617","#e85d04","💪"), title: "لياقة بدنية" },
+  { image: p("كرة الطائرة",       "#0096c7","#caf0f8","🏐"), title: "كرة الطائرة" },
+  { image: p("هوكي الجليد",       "#023e8a","#ade8f4","🏒"), title: "هوكي الجليد" },
+  { image: p("جمباز",             "#9d4edd","#c77dff","🤸"), title: "جمباز" },
+  { image: p("رياضات مائية",      "#0077b6","#00b4d8","🚣"), title: "رياضات مائية" },
+  { image: p("رياضات شتوية",      "#caf0f8","#023e8a","⛷️"), title: "رياضات شتوية" },
 ];
 
-// === مصفوفة الأطفال (15 عنصراً فريداً) ===
 const kids = [
-  { image: kids1, title: "عالم الكرتون" },
-  { image: kids2, title: "أميرات الثلج" },
-  { image: kids3, title: "كلاب الإنقاذ" },
-  { image: kids4, title: "مغامرات استوائية" },
-  { image: kids5, title: "أبطال المقنعون" },
-  { image: kids6, title: "عالم الديناصورات" },
-  { image: kids7, title: "قصص وحكايات عالمية" },
-  { image: kids8, title: "أغاني وأناشيد للأطفال" },
-  { image: kids9, title: "تعليم ومرح" },
-  { image: kids10, title: "رحلات الفضاء للصغار" },
-  { image: kids11, title: "الحيوانات السعيدة" },
-  { image: kids12, title: "ألعاب وابتكارات" },
-  { image: kids13, title: "جزيرة الكنز الخفية" },
-  { image: kids14, title: "مغامرات تحت الماء" },
-  { image: kids15, title: "مدرسة السحر للصغار" },
+  { image: p("عالم الكرتون",      "#ff6b6b","#feca57","🎨"), title: "عالم الكرتون" },
+  { image: p("أميرات الثلج",      "#a8dadc","#457b9d","❄️"), title: "أميرات الثلج" },
+  { image: p("كلاب الإنقاذ",      "#e63946","#f4a261","🐶"), title: "كلاب الإنقاذ" },
+  { image: p("مغامرات استوائية",  "#2d6a4f","#95d5b2","🌴"), title: "مغامرات استوائية" },
+  { image: p("عالم الديناصورات", "#606c38","#dda15e","🦕"), title: "عالم الديناصورات" },
+  { image: p("سحر وخيال",         "#7400b8","#c77dff","✨"), title: "سحر وخيال" },
+  { image: p("أبطال صغار",        "#f72585","#7209b7","🦸‍♂️"), title: "أبطال صغار" },
+  { image: p("فضاء وكواكب",       "#03071e","#48cae4","🪐"), title: "فضاء وكواكب" },
+  { image: p("حيوانات مضحكة",     "#f4a261","#e76f51","🐾"), title: "حيوانات مضحكة" },
+  { image: p("مدرسة السحر",       "#240046","#ff6d00","🪄"), title: "مدرسة السحر" },
+  { image: p("موسيقى وغناء",      "#ff006e","#fb5607","🎵"), title: "موسيقى وغناء" },
+  { image: p("عالم البحار",       "#0077b6","#caf0f8","🐠"), title: "عالم البحار" },
+  { image: p("مزرعة الحيوانات",   "#386641","#a7c957","🐄"), title: "مزرعة الحيوانات" },
+  { image: p("رسوم متحركة",       "#ff4d6d","#ff9a3c","🎬"), title: "رسوم متحركة" },
+  { image: p("ألعاب وتحديات",     "#7209b7","#3a0ca3","🎮"), title: "ألعاب وتحديات" },
 ];
 
 const ContentShowcase = () => {

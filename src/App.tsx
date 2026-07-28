@@ -1,33 +1,27 @@
-export default function MaintenancePage() {
-  return (
-    <div
-      style={{
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#f8f9fa",
-        color: "#333",
-        textAlign: "center",
-        fontFamily: "Arial, sans-serif",
-        padding: "20px",
-      }}
-    >
-      <div>
-        <h1 style={{ fontSize: "40px", marginBottom: "15px" }}>
-          🛠️ المتجر تحت الصيانة
-        </h1>
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { Toaster } from "@/components/ui/toaster";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import Index from "./pages/Index.tsx";
+import NotFound from "./pages/NotFound.tsx";
 
-        <p style={{ fontSize: "18px", color: "#666", lineHeight: "1.8" }}>
-          نعتذر عن الإزعاج، المتجر غير متاح حاليًا بسبب أعمال الصيانة والتطوير.
-          <br />
-          سنعود للعمل في أقرب وقت ممكن.
-        </p>
+const queryClient = new QueryClient();
 
-        <p style={{ marginTop: "25px", color: "#999", fontSize: "15px" }}>
-          شكرًا لتفهمكم وصبركم ❤️
-        </p>
-      </div>
-    </div>
-  );
-}
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
+
+export default App;
